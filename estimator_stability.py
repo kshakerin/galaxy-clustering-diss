@@ -26,8 +26,9 @@ import plotting as pot
 #-----------------------------------------------------------#
 #############################################################
 # Set the directories in which the data resides
-work_directory         = "/Users/kianalexandershakerin/Desktop/fife/dissertation/"
+work_directory         = "/Users/kianalexandershakerin/Desktop/fife/dissertation/clustering_analysis/"
 data_directory         = work_directory + "catalogues/"
+file_directory		   = work_directory + "data_files/"
 # Set the data file names from directory on computer
 DR7_data_filename      = "post_catalog.dr72bright0.fits"
 DR7_randoms_filename0  = "random-0.dr72bright.fits"
@@ -169,9 +170,9 @@ for ii in factor_array:
 	estim_array3.append(xi_3)
 
 # Data File Names
-f_name0 = "dp0_est.csv"
-f_name1 = "dp1_est.csv"
-f_name2 = "lz_est.csv"
+f_name0 = file_directory + "dp0_est.csv"
+f_name1 = file_directory + "dp1_est.csv"
+f_name2 = file_directory + "lz_est.csv"
 
 # Write Data to files
 md.data_writer(x_axis, np.array(estim_array1), factor_array, f_name0)
